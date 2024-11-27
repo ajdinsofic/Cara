@@ -1,9 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices.JavaScript;
+using Microsoft.AspNetCore.Identity;
 
 namespace RS1_2024_25.API.Data.Models;
 
-public class User
+public class User : IdentityUser
 {
     [Key]
     public int UserId { get; set; }

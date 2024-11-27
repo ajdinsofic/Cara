@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using VolanGo;
+using Microsoft.AspNetCore.Identity;
+using RS1_2024_25.API.Data.Models;
 
 var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -21,6 +23,9 @@ builder.Services.AddCors(options =>
                       });
 });
 
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication().AddCookie(IdentityConstants.ApplicationScheme).AddBearerToken(IdentityConstants.BearerScheme);
+builder.Services.AddIdentityCore<User>().AddEntityFrameworkStores<AppDbContext>().AddApiEndpoints();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
