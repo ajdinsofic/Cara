@@ -1,4 +1,4 @@
-Cara E-commerce - Web Design for Online Stores
+# Cara E-commerce - Web Design for Online Stores
 
 Cara E-commerce offers sleek, modern, and user-centric web design solutions tailored for online stores. 
 Focused on creating seamless shopping experiences, our designs prioritize intuitive navigation, fast load times, and mobile responsiveness. 
